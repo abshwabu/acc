@@ -13,3 +13,5 @@ class Account:
 
 account = Account('balance.txt')
 print(account.balance)
+account.withdraw(200)
+print(account.balance)
