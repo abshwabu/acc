@@ -1,7 +1,7 @@
 class Account:
-    def __init__(self,path):
-        with open(path,'r') as file:
-            self.balance = int(file.read)
+    def __init__(self,fpath):
+        with open(fpath,'r') as file:
+            self.balance = int(file.read())
     
 
     def withdraw(self,amount):
@@ -9,3 +9,7 @@ class Account:
 
     def deposit(self,amount):
         self.balance += amount
+
+
+account = Account('balance.txt')
+print(account.balance)
