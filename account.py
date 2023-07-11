@@ -1,4 +1,5 @@
 class Account:
+    """The main class"""
     def __init__(self,fpath):
         self.fpath = fpath
         with open(fpath,'r') as file:
@@ -16,6 +17,7 @@ class Account:
             file.write(str(self.balance)) 
 
 class Checking(Account):
+    """Checking class"""
     def __init__(self,fpath,fee):
         Account.__init__(self,fpath)
         self.fee = fee
